@@ -1,1 +1,67 @@
-you are loggedin.
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1>Users</h1>
+            </div>
+           
+          </div>
+        </div><!-- /.container-fluid -->
+      </section>
+  
+      <!-- Main content -->
+      <section class="content">
+
+        <div class="container">
+            <div class="col-md-12">
+        
+                <div class="card">
+                    <div class="card-header">
+                      <h3 class="card-title">Users</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body p-0">
+
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>User Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Role</th>
+                            <th>Picture</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+
+                          <% for(var i = 0; i< data.length; i++){ %>
+                            <tr>
+                                <td><%= data[i].user_name %></td>
+                                <td><%= data[i].email %></td>
+                                <td><%= data[i].phone_number %></td>
+                                <td><%= data[i].role %></td>
+                                <td>
+                                    <%= data[i].profile_picture %>
+                                </td>
+                                <td>
+                                    <a href="" class="btn btn-info">Edit</a>
+                                    <a href="" class="btn btn-danger">Delete</a>
+                                </td>
+                            </tr>
+                         <% } %>
+
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- /.card-body -->
+                  </div>
+                  <!-- /.card -->
+        
+            </div>
+        </div>
+      
+      </section>
+
+
